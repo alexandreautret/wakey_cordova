@@ -61,7 +61,8 @@ var app = {
   }
 },
 
-win: function(){
+win: function(data){
+  console.log(data)
       console.log('tts win');
     },
   fail: function(data){

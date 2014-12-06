@@ -56,12 +56,13 @@ var app = {
   console.log("Result "+result);
   //TTS.STARTED==2 use this once so is answered
   if (result == 2) {
-    navigator.tts.getLanguage(win, fail);
+    //navigator.tts.getLanguage(win, fail);
     navigator.tts.speak("The text to speech service is ready");
   }
 },
 
-win: function(){
+win: function(data){
+  console.log(data)
       console.log('tts win');
     },
   fail: function(data){
