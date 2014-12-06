@@ -1,2 +1,2 @@
-/Users/Alex/www/swrouen/cordova/platforms/android/CordovaLib/ant-build/AndroidManifest.xml : \
-/Users/Alex/www/swrouen/cordova/platforms/android/CordovaLib/AndroidManifest.xml \
+/home/antiseptikk/projets/wakey_cordova/platforms/android/CordovaLib/ant-build/AndroidManifest.xml : \
+/home/antiseptikk/projets/wakey_cordova/platforms/android/CordovaLib/AndroidManifest.xml \

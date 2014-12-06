@@ -44,31 +44,33 @@ var app = {
         var receivedElement = parentElement.querySelector('.received');
 
         console.log('tts');
-      navigator.tts.startup(app.startupWin, app.fail);
+        navigator.tts.startup(app.startupWin, app.fail);
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     },
     startupWin: function startupWin(result) {
-  console.log("Startup win");
-  // When result is equal to STARTED we are ready to play
-  console.log("Result "+result);
-  //TTS.STARTED==2 use this once so is answered
-  if (result == 2) {
-    navigator.tts.getLanguage(win, fail);
-    navigator.tts.speak("The text to speech service is ready");
-  }
+        console.log("Startup win");
+        // When result is equal to STARTED we are ready to play
+        console.log("Result "+result);
+        //TTS.STARTED==2 use this once so is answered
+        if (result == 2) {
+          navigator.tts.setLanguage('fr', app.startupWin(), app.fail());
+//          navigator.tts.pitch('75', app.startupWin(), app.fail());
+//          navigator.tts.speed('50', app.startupWin(), app.fail());
+          navigator.tts.speak("Bonjour clément, il est minuit. vous avez 3 nouveau emails");
+        }
 },
 
 win: function(data){
-  console.log(data)
-      console.log('tts win');
-    },
-  fail: function(data){
-    console.log(data);
-    console.log('tts fail');
-  },
+    console.log(data)
+        console.log('tts win');
+      },
+fail: function(data){
+      console.log(data);
+      console.log('tts fail');
+},
     facebookConnect: function(){
       console.log('test');
       var socket = io.connect('http://alexandre.halo.gsa-studio.net:3003/');
