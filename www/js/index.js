@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var user_token = [];
+var user = [];
 var app = {
     // Application Constructor
     initialize: function() {
@@ -35,7 +35,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        app.facebookConnect();
+        //app.facebookConnect();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -43,6 +43,8 @@ var app = {
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
+        console.log('tts');
+        window.plugins.tts.speak("The TTS service is ready", win, fail);
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
@@ -50,11 +52,11 @@ var app = {
     },
     facebookConnect: function(){
       console.log('test');
-      var socket = io.connect('http://vincent.halo.gsa-studio.net:3002/');
+      var socket = io.connect('http://alexandre.halo.gsa-studio.net:3003/');
       // demande les dates de naissances du jour au serveur
       // callback : data [{name:"Nom"},{name:"Nom"},{name:"Nom"},{name:"Nom"}]
       socket.emit('getBirthday',null, function(data){
-        alert('Birth Days');
+        //alert('Birth Days Youpala');
         console.log(data);
       });
 
@@ -64,7 +66,7 @@ var app = {
       // demande de la phrase du jour
       // callback : data -> message
       socket.emit('getHello', {name:'Alexandre'},function(data){
-        alert('Hello');
+        //alert('Hello');
         console.log(data);
       });
 
@@ -74,19 +76,25 @@ var app = {
         socket.emit('my other event', { my: 'data' });
       });
 
-//      var facebookLoginPage = window.open('http://vincent.halo.gsa-studio.net/');
+    /*
+      FACEBOOK -> Fonctionne
+      var facebookLoginPage = window.open('http://alexandre.halo.gsa-studio.net/fb_connect', '_blank', 'location=yes');
 
-/*      socket.on('FB-connected', function(data){
+
+      console.log('waiting for fb connect event');
+      socket.on('connected', function(data){
         console.log('Facebook connected ');
         if(data.isConnected){
           console.log('is connected');
           facebookLoginPage.close();
+          console.log(data.userID);
           user['token'] = data.accessToken;
           user['id'] = data.userID;
+
         }
       });
-*/
 
+*/
 
 
 

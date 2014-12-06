@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C5AB6952-058A-4A54-8FBD-FCA6CEEFEFD8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Wakey</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>13EFD36580161CDAF6B0C0F3041719F3F716520D</key>
+		<string>github.com:alexandreautret/wakey_cordova.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Wakey.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>13EFD36580161CDAF6B0C0F3041719F3F716520D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:alexandreautret/wakey_cordova.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>13EFD36580161CDAF6B0C0F3041719F3F716520D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>13EFD36580161CDAF6B0C0F3041719F3F716520D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cordova</string>
+		</dict>
+	</array>
+</dict>
+</plist>
